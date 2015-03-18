@@ -19,6 +19,7 @@
     "url": "https://github.com/romanpitak/pfm/issues"
   },
   "homepage": "https://github.com/romanpitak/pfm",
+  "main": "lib/pfm.js",
   "dependencies": {
       "marked": "^0.3.3"
   },
