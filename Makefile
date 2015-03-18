@@ -1,7 +1,8 @@
 
 coffee = ./node_modules/.bin/coffee
+coffeelint = ./node_modules/.bin/coffeelint
 
-.PHONY: all clean
+.PHONY: all clean test lint
 
 all: lib/pfm.js
 
@@ -12,6 +13,11 @@ lib/pfm.js: src/pfm.litcoffee node_modules
 node_modules: package.json
 	npm install
 	@touch $@
+
+test: lint
+
+lint: src/pfm.litcoffee node_modules
+	$(coffeelint) $<
 
 clean:
 	rm --recursive --force -- lib

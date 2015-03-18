@@ -4,7 +4,7 @@
   "description": "Piták Flavored Markdown",
   "main": "lib/pfm.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "make test"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "marked": "^0.3.3"
   },
   "devDependencies": {
-    "coffee-script": "^1.9.1"
+    "coffee-script": "^1.9.1",
+    "coffeelint": "^1.9.2"
   }
 }
