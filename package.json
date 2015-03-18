@@ -1,0 +1,22 @@
+{
+  "name": "pfm",
+  "version": "0.0.0",
+  "description": "Piták Flavored Markdown",
+  "main": "''",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/romanpitak/pfm.git"
+  },
+  "keywords": [
+    "markdown"
+  ],
+  "author": "Roman Piták <roman@pitak.net> (http://pitak.net)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/romanpitak/pfm/issues"
+  },
+  "homepage": "https://github.com/romanpitak/pfm"
+}
