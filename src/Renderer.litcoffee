@@ -22,8 +22,8 @@ Sync renderer methods require `child_process.execSync`.
                 result = execSync "pygmentize -l #{lexer} -f html",
                     input: code
             catch err
-                codeClass = "\"#{this.options.langPrefix}#{escape(lexer, true)}\""
-                return "<pre><code class=#{codeClass}>#{code}</code><pre>"
+                codeClass = "#{this.options.langPrefix}#{escape(lexer, true)}"
+                return "<pre><code class=\"#{codeClass}\">#{code}</code><pre>"
             return result.toString()
 
 ### Codespan
