@@ -67,6 +67,8 @@ so that it doesn't get replaced by `&nbsp;` in paragraph.
             out = "<a href=\"#{href}\""
             if title?
                 out += " title=\"#{title}\""
+            if href.match /^https?:\/\//
+                out += ' target="_blank"'
             out += ">#{text}</a>"
             return out
 

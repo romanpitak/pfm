@@ -8,3 +8,4 @@ This module alters the `marked` module to my liking.
 - highlighting is done by [`pygmentize`](http://pygments.org)
 - In paragraphs, `~` renders to `&nbsp;`
 - In inline code, `~` renders to `&Tilde;`
+- Link to external hosts have `target="_blank"`
