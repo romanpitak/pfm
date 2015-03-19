@@ -39,6 +39,14 @@ so that it doesn't get replaced by `&nbsp;` in paragraph.
         codespan: (text) ->
             return "<code>#{text.replace /~/g, '&Tilde;'}</code>"
 
+### Heading
+
+        heading: (text, level, raw) ->
+            id = this.options.headerPrefix
+            id += raw.toLowerCase().replace /[^\w]+/g, '-'
+            tag = "h#{level}"
+            return "<#{tag} id=\"#{id}\">#{text}</#{tag}>\n"
+
 ### Html
 
         html: (html) ->
