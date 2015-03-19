@@ -1,6 +1,6 @@
 {
   "name": "pfm",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Piták Flavored Markdown",
   "main": "lib/index.js",
   "scripts": {
