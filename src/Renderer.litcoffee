@@ -52,6 +52,24 @@ so that it doesn't get replaced by `&nbsp;` in paragraph.
         html: (html) ->
             return html
 
+### Link
+
+        link: (href, title, text) ->
+            if @options.sanitize
+                try
+                    prot = decodeURIComponent unescape href
+                    prot = prot.replace /[^\w:]/g, ''
+                    prot = prot.toLowerCase()
+                catch err
+                    return ''
+                return '' if prot.indexOf 'javascript:' is 0
+                return '' if prot.indexOf 'vbscript:' is 0
+            out = "<a href=\"#{href}\""
+            if title?
+                out += " title=\"#{title}\""
+            out += ">#{text}</a>"
+            return out
+
 ### Paragraph
 
 Replace `~` with `&nbsp;`
