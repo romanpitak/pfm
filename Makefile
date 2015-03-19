@@ -1,12 +1,18 @@
 
+srcDir = src
+outDir = lib
+
+srcFiles = $(wildcard $(srcDir)/*.litcoffee)
+outFiles = $(patsubst $(srcDir)/%.litcoffee, $(outDir)/%.js, $(srcFiles))
+
 coffee = ./node_modules/.bin/coffee
 coffeelint = ./node_modules/.bin/coffeelint
 
 .PHONY: all clean test lint
 
-all: lib/pfm.js
+all: $(outFiles)
 
-lib/pfm.js: src/pfm.litcoffee node_modules
+$(outDir)/%.js: $(srcDir)/%.litcoffee node_modules
 	@mkdir -p $(@D)
 	$(coffee) --print --compile $< >$@
 
@@ -16,9 +22,9 @@ node_modules: package.json
 
 test: lint
 
-lint: src/pfm.litcoffee node_modules
-	$(coffeelint) $<
+lint: node_modules $(srcFiles)
+	$(coffeelint) $(srcFiles)
 
 clean:
-	rm --recursive --force -- lib
+	rm --recursive --force -- $(outDir)
 	rm --recursive --force -- node_modules
