@@ -39,6 +39,11 @@ so that it doesn't get replaced by `&nbsp;` in paragraph.
         codespan: (text) ->
             return "<code>#{text.replace /~/g, '&Tilde;'}</code>"
 
+### Html
+
+        html: (html) ->
+            return html
+
 ### Paragraph
 
 Replace `~` with `&nbsp;`
