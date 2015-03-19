@@ -31,8 +31,6 @@ Sync renderer methods require `child_process.execSync`.
     marked.setOptions
         renderer: renderer
 
-marked.Renderer = new Renderer
-
 ## Expose
 
     module.exports = marked
