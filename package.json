@@ -2,7 +2,7 @@
   "name": "pfm",
   "version": "0.2.0",
   "description": "Piták Flavored Markdown",
-  "main": "lib/pfm.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "make test"
   },
