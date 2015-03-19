@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.3.0
+
+- Link to external hosts have `target="_blank"`
+
 ## 0.2.0
 
 - In paragraphs, `~` renders to `&nbsp;`
