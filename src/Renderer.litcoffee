@@ -9,6 +9,11 @@ load modules
 
     class Renderer extends marked.Renderer
 
+### Blockquote
+
+        blockquote: (quote) ->
+            return "<blockquote>\n#{quote}</blockquote>\n"
+
 ### Code
 
 To use `pygmentize` we need to rewrite the `renderer.code` method
