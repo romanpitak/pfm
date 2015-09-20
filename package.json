@@ -20,10 +20,10 @@
   },
   "homepage": "https://github.com/romanpitak/pfm",
   "dependencies": {
-    "marked": "^0.3.3"
+    "marked": "^0.3.5"
   },
   "devDependencies": {
-    "coffee-script": "^1.9.1",
-    "coffeelint": "^1.9.2"
+    "coffee-script": "^1.10.0",
+    "coffeelint": "^1.12.1"
   }
 }
