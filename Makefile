@@ -5,8 +5,9 @@ outDir = lib
 srcFiles = $(wildcard $(srcDir)/*.litcoffee)
 outFiles = $(patsubst $(srcDir)/%.litcoffee, $(outDir)/%.js, $(srcFiles))
 
-coffee = ./node_modules/.bin/coffee
-coffeelint = ./node_modules/.bin/coffeelint
+node=iojs
+coffee = $(node) ./node_modules/.bin/coffee
+coffeelint = $(node) ./node_modules/.bin/coffeelint
 
 .PHONY: all clean test lint
 
